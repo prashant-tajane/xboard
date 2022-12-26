@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+html {
+    font-size: 15px;
+}
+
+.brand,
+.container:nth-child(2) p {
+    padding-left: 1rem;
+}
+
+.brand::before {
+    content: '';
+    display: block;
+
+    width: 24px;
+    height: 6px;
+    border-radius: 4px / 3px;
+    margin-bottom: 0.2rem;
+
+    background: linear-gradient(to right, #E537B9, #C040DF);
+}
+
+.brand {
+    color: #292B2E;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    letter-spacing: 0.125rem;
+    line-height: 1.5rem;
+}
+
+.container:nth-child(2) p:first-child {
+    color: #292B2E;
+
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.container:nth-child(2) p:last-child {
+    color: #858585;
+
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.container:nth-child(2) {
+    min-height: 74vh;
+}
+
+.carousel-item>* {
+    text-decoration: none;
+}
+
+.card_image {
+    height: 400px;
+}
+
+.card_image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.heading {
+    color: #292B2E;
+
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    line-height: 2rem;
+    letter-spacing: 0.00625rem;
+}
+
+/* div containing author and pubDate */
+.heading+div {
+    color: #586069;
+    font-size: 0.875rem;
+    font-weight: 600;
+
+    line-height: 1.5rem;
+    letter-spacing: 0.125rem;
+}
+
+.description {
+    color: #292B2E;
+    font-weight: 500;
+
+    /* line-height: 1.625rem;
+    letter-spacing: 0.09rem; */
+}
+
+button[class^='carousel-control'] {
+    width: 35px;
+    height: 340px;
+    bottom: unset;
+    align-items: flex-end;
+}
+
+button[class^='carousel-control']:nth-of-type(1) {
+    justify-content: flex-start;
+}
+
+button[class^='carousel-control']:nth-of-type(2) {
+    justify-content: flex-end;
+}
+
+/* not able to get svgs working in safari without below rule */
+button[class^='carousel-control'] svg {
+    width: 14px;
+    height: 28px;
+
+    margin: 0 0 2rem 0;
+}
+
+.accordion-button {
+    color: #737373;
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    letter-spacing: 0.00625rem;
+    line-height: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* gap: 1rem; */
+}
+
+.accordion-button>span:last-child {
+    letter-spacing: 0.09rem;
+    margin-left: 1rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #737373;
+    background-color: white;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    display: none;
+}
+
+.accordion-item {
+    border-bottom: none;
+}
+
+.accordion-button:not(.collapsed) .angle-down>* {
+    transform: rotate(180deg);
+}
+
+.angle-down>* {
+    width: 1.3rem;
+    height: 1.3rem;
+    transition: transform .2s ease-in-out;
+
+    /*
+    https: //stackoverflow.com/questions/22252472/how-to-change-the-color-of-an-svg-element
+*/
+    fill: #737373;
+}
+
+footer {
+    color: #292B2E;
+    /* gap: 0.35rem; */
+    word-spacing: 0.06rem;
+
+    font-weight: 500;
+    letter-spacing: 0.0125rem;
+}
+
+footer svg {
+    width: 0.95rem;
+    height: 0.9rem;
+    margin: auto 0.35rem;
+}
+
+@media (min-width: 540px) {
+    html {
+        font-size: 17px;
+    }
+
+    .brand,
+    .container:nth-child(2) p {
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 960px) {
+    .container {
+        width: 800px;
+    }
+}
